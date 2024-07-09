@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Folha de estilos - Style sheet -->
+    <link rel="stylesheet" href="/css/main.css">
+    <!-- Fonts de texto - Font text -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Press+Start+2P&display=swap"
+        rel="stylesheet">
+
+    <title>AluraGeek</title>
+</head>
+
+<body>
+    <!-- Cabeçalho - Header -->
+    <header>
+        <div class="header__logo">
+            <img src="/hearts.svg" alt="Imagem dos 3 corações em pixel art">
+            <h2>Alura Geek</h2>
+        </div>
+    </header>
+    <!-- Principal - Main -->
+    <main>
+        <!-- Seção de card dos produtos - section  card of product  -->
+        <section class="product">
+            <h2 class="product__title">MEUS PRODUTOS</h2>
+            <div class="product__box" alt="produtos" data-products>
+
+            </div>
+        </section>
+        <!-- Seção de formulário para adicionar produtos -->
+        <section class="addproduct">
+            <h2 class="addproduct__title">ADICIONAR PRODUTOS:</h2>
+            <form class="addproduct__form" action="" method="post" data-form>
+                <input class="addproduct__input" type="text" name="name" placeholder="Nome" required data-form-name>
+                <input class="addproduct__input" type="number" step="0.01" pattern="\d+(\.\d{2})?" name="price"
+                    placeholder="Valor" required data-form-price>
+                <input class="addproduct__input" type="url" name="img" placeholder="url da imagem" required
+                    data-form-image>
+                <div class="addproduct__btn__box">
+                    <input class="addproduct__btn submit__btn" type="submit" value="Salvar" disabled>
+                    <input class="addproduct__btn clear__btn" type="button" value="Limpar" data-form-clear>
+                </div>
+            </form>
+            <h5 class="message" id="messageError"></h5>
+        </section>
+    </main>
+    <!-- Rodapé - Footer -->
+    <footer>
+        <div class="footer__logo">
+            <img src="/hearts.svg" alt="Imagem dos 3 corações em pixel art">
+            <h2>AluraGeek</h2>
+        </div>
+        <p class="footer__dev">DESENVOLVIDO POR CLAUDEMIR NERI</p>
+        <p class="footer__alura">ALURA LATAM - 2024</p>
+    </footer>
+
+    <!-- Arquivos do JS -  Scripts -->
+    <script type="module" src="../js/showProducts.js"></script>
+    <script type="module" src="../js/createProduct.js"></script>
+    <script type="module" src="../js/clearForm.js"></script>
+    <script type="module" src="../js/deleteProduct.js"></script>
+    <script type="module" src="../js/validate.js"></script>
+</body>
+
+</html>
